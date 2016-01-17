@@ -32,6 +32,7 @@ end
 
 Then /^the word should read "(.*)"$/ do |word|
   page.should have_content(word)
+
 end
 
 Then /^the wrong guesses should include:(.*)$/ do |guesses|
@@ -69,6 +70,7 @@ Then /^(?:|I )should be on (.+)$/ do |page_name|
 end
 
 Then /^(?:|I )should see "([^\"]*)"(?: within "([^\"]*)")?$/ do |text, selector|
+
   with_scope(selector) do
     if page.respond_to? :should
       page.should have_content(text)

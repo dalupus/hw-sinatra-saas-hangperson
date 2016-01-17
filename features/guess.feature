@@ -14,7 +14,8 @@ Scenario: guess correct letter that occurs multiple times
 
   Given I start a new game with word "animal"
   When I guess "a"
-  Then I should see "a---a-" within "span.word"
+  #Then the word should read "a---a-"
+  Then I should see "a---a-a" within "span.word"
 
 Scenario: guess incorrect letter
 
